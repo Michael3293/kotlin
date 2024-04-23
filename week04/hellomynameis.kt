@@ -11,7 +11,7 @@ fun main() {
     println("Die I tell you that my first name is $first? ")
     age = age - 5
     println("And would you believe me I'm $age years old?")
-    print("What day is it today? ")
+    print("What day is it today? ") 
     val day = readLine()!!
     println(day)
 

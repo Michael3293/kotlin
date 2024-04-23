@@ -1,0 +1,13 @@
+class Rectangle(val length: Double, val width: Double) {
+    fun calculateArea(): Double {
+        return length * width
+    }
+}
+
+fun main() {
+    val rectangle1 = Rectangle(5.0, 4.0)
+    val rectangle2 = Rectangle(3.5, 6.0)
+
+    println("Area of rectangle 1: ${rectangle1.calculateArea()}")
+    println("Area of rectangle 2: ${rectangle2.calculateArea()}")
+}

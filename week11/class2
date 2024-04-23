@@ -1,0 +1,24 @@
+fun main() {
+    println("Enter the number of pyramid levels desired:")
+    val pyramidLevels = readLine()?.toIntOrNull()
+
+    if (pyramidLevels != null && pyramidLevels > 0) {
+        printPyramid(pyramidLevels)
+    } else {
+        println("Invalid input. Please enter a positive integer.")
+    }
+}
+
+fun printPyramid(levels: Int) {
+    for (i in 1..levels) {
+        // Print spaces to center-align the pyramid
+        for (j in 1..(levels - i)) {
+            print(" ")
+        }
+        // Print asterisks for each level
+        for (k in 1..i) {
+            print("*")
+        }
+        println() // Move to the next line for the next level
+    }
+} 

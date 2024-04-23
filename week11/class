@@ -1,0 +1,27 @@
+fun main() {
+    println("Enter the movie rating (G, PG, PG-13, R, or NC-17):")
+    val rating = readLine()
+
+    println("Enter your age:")
+    val ageInput = readLine()
+    val age = ageInput?.toIntOrNull()
+
+    if (rating != null && age != null) {
+        val isAllowed = when (rating.toUpperCase()) {
+            "G" -> true
+            "PG" -> true
+            "PG-13" -> age >= 13
+            "R" -> age >= 17
+            "NC-17" -> age >= 17
+            else -> false
+        }
+
+        if (isAllowed) {
+            println("You are allowed to see the movie.")
+        } else {
+            println("Sorry, you are not allowed to see the movie.")
+        }
+    } else {
+        println("Invalid input. Please enter valid values.")
+    }
+}
